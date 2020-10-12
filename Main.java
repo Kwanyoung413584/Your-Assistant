@@ -50,10 +50,13 @@ while(true){
   switch(NextLine.toLowerCase()){ //switch(given value) (The given value is what you put in the scanner.)
 
     // Cases are the values to compare with the given value.
+
+    // Command: Say hello
     case "hello":
       System.out.println("Hello :)");
       break;
 
+    // Command: View your tasks
     case "tasks":
       if (TaskList[0] == "" && TaskList[1] == "" && TaskList[2] == "" && TaskList[3] == "" && TaskList[4] == "") {
         System.out.println("You do not have any tasks yet! Add a task by typing in addtask");
@@ -67,6 +70,7 @@ while(true){
       }
       break;
 
+    // Command: Add a new task
     case "addtask":
       System.out.println("Where do you want to put your new task? Putting it on a existing task location will overwrite it! Accepts locations between 0 - 4");
       // Prevents the code from turning off when it gets a error. Possibly due to someone putting a double value or a string as the location of the task.
@@ -93,6 +97,7 @@ while(true){
       }
       break;  
 
+    // Command: Remove a task
     case "removetask":
       System.out.println("What task do you want to remove? Accepts locations between 0 - 4");
       // Prevents the code from turning off when it gets a error. Possibly due to someone putting a double value or a string as the location of the task.
@@ -117,6 +122,7 @@ while(true){
       }
       break;  
 
+    // Command: Start a guessing game
     case "guessgame":
       System.out.println("Guess this number between 1 - 100, Type in 0 to cancel the game.");
       int GetGuess = 0;
@@ -165,6 +171,7 @@ while(true){
       
       break;
 
+    // Command: Calculate 2 numbers (Works with +, -, x, /, %)
     case "calculate":
       int Num1;
       int Num2;
@@ -205,6 +212,7 @@ while(true){
       }
       break;
 
+    // Command: Displays a list of commands
     case "help":
       System.out.println("[Here are the list of commands:]");
       System.out.println("[calculate]");
@@ -216,6 +224,7 @@ while(true){
       System.out.println("[removetask]");   
       break;
 
+    // Command: Shuts down and closes the robot assistant.
     case "shutdown":
       System.out.println("Are you sure you want to shutdown? This will clear every data including tasks. This is irreversible! (true, false)");
 
