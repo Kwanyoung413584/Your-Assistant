@@ -279,19 +279,19 @@ while(true){
         System.out.println("Your puny, small " + YourGrabWeaponName + " got wrapped by AI's huge " + AIGrabWeaponName + "!");
       }
       else if (YourWeaponID == 1 && AIWeaponID == 3){
-        System.out.println("Your massive, and magical " + YourGrabWeaponName + " broke AI's " + AIGrabWeaponName + " into microscopic pieces!");
+        System.out.println("Your magical, massive " + YourGrabWeaponName + " broke AI's " + AIGrabWeaponName + " into microscopic pieces!");
       }
       else if (YourWeaponID == 2 && AIWeaponID == 1){
-        System.out.println("Your grand, " + YourGrabWeaponName + "destroyed AI's worthless " + AIGrabWeaponName + "!");
+        System.out.println("Your heavily armored " + YourGrabWeaponName + " destroyed AI's worthless " + AIGrabWeaponName + "!");
       }
       else if (YourWeaponID == 2 && AIWeaponID == 3){
         System.out.println("Your flimsy " + YourGrabWeaponName + " got cut off by AI's indestructable " + AIGrabWeaponName + "!");
       }
       else if (YourWeaponID == 3 && AIWeaponID == 1){
-        System.out.println("Your tiny, " + YourGrabWeaponName + " got smashed by AI's master programmed " + AIGrabWeaponName + "!");
+        System.out.println("Your tiny " + YourGrabWeaponName + " got smashed by AI's master programmed " + AIGrabWeaponName + "!");
       }
       else if (YourWeaponID == 3 && AIWeaponID == 2){
-        System.out.println("Your razor bladed, " + YourGrabWeaponName + " sheared through AI's fragile " + AIGrabWeaponName + "!");
+        System.out.println("Your razor bladed " + YourGrabWeaponName + " sheared through AI's fragile " + AIGrabWeaponName + "!");
       }
       
 
