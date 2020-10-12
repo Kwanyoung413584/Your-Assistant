@@ -48,7 +48,11 @@ class Main {
         }
         GetGuess = GetScanner.nextInt(); 
       }
-      System.out.println("Great Job! The Number Is " + CorrectGuess);
+      if (GetGuess == CorrectGuess){
+      int ToIntCorrectGuess = (int) CorrectGuess;
+      System.out.println("Great Job! The Number Is " + ToIntCorrectGuess);
+      }
+
       break;
 
     case "calculate":
@@ -86,11 +90,11 @@ class Main {
       break;
 
     case "help":
-      System.out.println("Here are the list of commands:");
-      System.out.println("calculate");
-      System.out.println("hello");
-      System.out.println("bye");
-      System.out.println("guessgame");
+      System.out.println("[Here are the list of commands:]");
+      System.out.println("[calculate]");
+      System.out.println("[hello]");
+      System.out.println("[bye]");
+      System.out.println("[guessgame]");
       break;
 
     case "bye":
