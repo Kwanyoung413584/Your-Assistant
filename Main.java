@@ -88,7 +88,7 @@ while(true){
       }
       // This bottom code executes when it catches a error.
       catch (Exception e){
-        System.out.println("That is not a valid input.");
+        System.out.println("That is not a valid input. :(");
         break;
       }
       break;  
@@ -112,7 +112,7 @@ while(true){
       }
       // This bottom code executes when it catches a error.
       catch (Exception e){
-        System.out.println("That is not a valid input.");
+        System.out.println("That is not a valid input. :(");
         break;
       }
       break;  
@@ -140,7 +140,7 @@ while(true){
       }
       if (GetGuess == CorrectGuess){
       int ToIntCorrectGuess = (int) CorrectGuess;
-      System.out.println("Great Job! The Number Is " + ToIntCorrectGuess);
+      System.out.println("Great Job! The Number Is " + ToIntCorrectGuess + ":D");
       }
 
       break;
@@ -212,7 +212,7 @@ while(true){
       }
       catch (Exception e) {
       TurnedOff = false;
-        System.out.println("That is a invalid input. Has to be a boolean. Canceled Shutdown.");
+        System.out.println("That is a invalid input :(. Has to be a boolean. Canceled Shutdown.");
       }
       break;
 
