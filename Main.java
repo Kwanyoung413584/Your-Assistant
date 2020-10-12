@@ -90,6 +90,7 @@ class Main {
       System.out.println("calculate");
       System.out.println("hello");
       System.out.println("bye");
+      System.out.println("guessgame");
       break;
 
     case "bye":
