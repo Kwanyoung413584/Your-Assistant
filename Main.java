@@ -48,7 +48,7 @@ class Main {
         }
         GetGuess = GetScanner.nextInt(); 
       }
-      ystem.out.println("Great Job! The Number Is " + CorrectGuess);
+      System.out.println("Great Job! The Number Is " + CorrectGuess);
       break;
 
     case "calculate":
