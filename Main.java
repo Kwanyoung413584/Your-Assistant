@@ -225,6 +225,82 @@ while(true){
       }
       break;
 
+     // Command: Start a rock paper scissor game
+    case "rps":
+      System.out.println("What is your weapon? 1 = Rock, 2 = Paper, 3 = Scissor");
+      int YourWeaponID = 1;
+      try {
+      YourWeaponID = GetScanner.nextInt(); 
+      }
+      catch (Exception e){
+        System.out.println("Not a valid input :(. Canceled game.");
+      }
+ 
+      if (YourWeaponID < 0 || YourWeaponID > 3) {
+        System.out.println("That is a invalid weapon ID! Game canceled :(.");
+        break;
+      }
+       
+      double AIWeaponID = Math.floor((Math.random()*3)+1);
+      
+      String YourGrabWeaponName = "Rock";
+      String AIGrabWeaponName = "Rock";
+
+      if (YourWeaponID == 1){
+        YourGrabWeaponName = "Rock";
+      }
+      else if (YourWeaponID == 2){
+        YourGrabWeaponName = "Paper";
+      }
+      else if (YourWeaponID == 3){
+        YourGrabWeaponName = "Scissor";
+      }
+
+      if (AIWeaponID == 1){
+        AIGrabWeaponName = "Rock";
+      }
+      else if (AIWeaponID == 2){
+        AIGrabWeaponName = "Paper";
+      }
+      else if (AIWeaponID == 3){
+        AIGrabWeaponName = "Scissor";
+      }
+
+      System.out.println("~~~ Results ~~~");
+      System.out.println("Your weapon: " + YourGrabWeaponName);
+      System.out.println("AI's weapon: " + AIGrabWeaponName);
+      System.out.println("~~~ Battle ~~~");
+ 
+
+      if (YourWeaponID == AIWeaponID){
+        System.out.println("You and the AI both chose " + AIGrabWeaponName + " and both got eliminated! Its a tie!");
+      }
+      else if (YourWeaponID == 1 && AIWeaponID == 2){
+        System.out.println("Your puny, small " + YourGrabWeaponName + " got wrapped by AI's huge " + AIGrabWeaponName + "!");
+      }
+      else if (YourWeaponID == 1 && AIWeaponID == 3){
+        System.out.println("Your massive, and magical " + YourGrabWeaponName + " broke AI's " + AIGrabWeaponName + " into microscopic pieces!");
+      }
+      else if (YourWeaponID == 2 && AIWeaponID == 1){
+        System.out.println("Your grand, " + YourGrabWeaponName + "destroyed AI's worthless " + AIGrabWeaponName + "!");
+      }
+      else if (YourWeaponID == 2 && AIWeaponID == 3){
+        System.out.println("Your flimsy " + YourGrabWeaponName + " got cut off by AI's indestructable " + AIGrabWeaponName + "!");
+      }
+      else if (YourWeaponID == 3 && AIWeaponID == 1){
+        System.out.println("Your tiny, " + YourGrabWeaponName + " got smashed by AI's master programmed " + AIGrabWeaponName + "!");
+      }
+      else if (YourWeaponID == 3 && AIWeaponID == 2){
+        System.out.println("Your razor bladed, " + YourGrabWeaponName + " sheared through AI's fragile " + AIGrabWeaponName + "!");
+      }
+      
+
+
+      break;
+
+
+
+
     // Command: Displays a list of commands
     case "help":
       System.out.println("[Here are the list of commands:]");
@@ -235,6 +311,7 @@ while(true){
       System.out.println("[tasks]");
       System.out.println("[addtask]");
       System.out.println("[removetask]");   
+      System.out.println("[rps]");     
       break;
 
     // Command: Shuts down and closes the robot assistant.
@@ -262,6 +339,10 @@ while(true){
         System.out.println("That is a invalid input :(. Has to be a boolean. Canceled Shutdown.");
       }
       break;
+
+
+
+
 
     // When every case doesn't match with the given value, it will execute the script in default. This is like else in a if statement.
     default:
