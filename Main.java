@@ -25,27 +25,39 @@ class Main {
 
     switch(NextLine.toLowerCase()){
 
-      case "hello":
+    case "hello":
       System.out.println("Hello");
       break;
 
+    case "guessgame":
+      System.out.println("Guess this number between 1 - 100, Type in 0 to cancel the game.");
+      int GetGuess = GetScanner.nextInt(); 
+      double CorrectGuess = Math.floor((Math.random()*100)+1);
+      while(GetGuess != CorrectGuess){
 
+        if (GetGuess == 0){
+          System.out.println("Canceled Guessing Game");
+          break;
+        }
 
+        if (GetGuess < CorrectGuess){
+          System.out.println("The Number Is Too Low");
+        }
+        else if (GetGuess > CorrectGuess){
+          System.out.println("The Number Is Too High");
+        }
+        GetGuess = GetScanner.nextInt(); 
+      }
+      ystem.out.println("Great Job! The Number Is " + CorrectGuess);
+      break;
 
-
-
-
-
-
-
-
-      case "calculate":
+    case "calculate":
       int Num1;
       int Num2;
 
-      System.out.println("What is your first number");
+      System.out.println("What is your first number (Has to be int)");
       Num1 = GetScanner.nextInt(); 
-      System.out.println("What is your second number");
+      System.out.println("What is your second number (Has to be int)");
       Num2 = GetScanner.nextInt();
       
       int Oper;
@@ -73,21 +85,21 @@ class Main {
       }
       break;
 
-      case "help":
+    case "help":
       System.out.println("Here are the list of commands:");
       System.out.println("calculate");
       System.out.println("hello");
       System.out.println("bye");
-
-
       break;
 
-      case "bye":
+    case "bye":
       SaidBye = true;
       System.out.println("Goodbye");
       break;
-      default:
+
+    default:
       System.out.println("That is not a valid command");
+
     }
 
     NextLine = GetScanner.next();
