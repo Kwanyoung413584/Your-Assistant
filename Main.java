@@ -119,36 +119,56 @@ while(true){
 
     case "guessgame":
       System.out.println("Guess this number between 1 - 100, Type in 0 to cancel the game.");
-      int GetGuess = GetScanner.nextInt(); 
+      int GetGuess = 0;
+      try {
+      GetGuess = GetScanner.nextInt(); 
+      }
+      catch (Exception e){
+        System.out.println("Not a valid input :(.");
+      }
+
       // Randomizer from 1 - 100 (Has to be double, but I can convert it to int once it prints the correct number)
       double CorrectGuess = Math.floor((Math.random()*100)+1);
-
+        
       while(GetGuess != CorrectGuess){
-
+        try {
         if (GetGuess == 0){
           System.out.println("Canceled Guessing Game");
           break;
         }
 
+      
         if (GetGuess < CorrectGuess){
-          System.out.println("The Number Is Too Low");
+          System.out.println("The Number Is Too Low 🤔");
         }
         else if (GetGuess > CorrectGuess){
-          System.out.println("The Number Is Too High");
+          System.out.println("The Number Is Too High 🤔");
         }
-        GetGuess = GetScanner.nextInt(); 
+     
+        GetGuess = GetScanner.nextInt();
       }
-      if (GetGuess == CorrectGuess){
-      int ToIntCorrectGuess = (int) CorrectGuess;
-      System.out.println("Great Job! The Number Is " + ToIntCorrectGuess + ":D");
+      catch (Exception e){
+        System.out.println("Not a valid input :(.");
       }
 
+      }
+      try {
+      if (GetGuess == CorrectGuess){
+      int ToIntCorrectGuess = (int) CorrectGuess;
+      System.out.println("Great Job! The Number Is " + ToIntCorrectGuess + " :D");
+      }
+      }
+      catch (Exception e){
+        System.out.println("An error occured :(.");
+      }
+      
+      
       break;
 
     case "calculate":
       int Num1;
       int Num2;
-
+      try{
       System.out.println("What is your first number (Has to be int)");
       Num1 = GetScanner.nextInt(); 
       System.out.println("What is your second number (Has to be int)");
@@ -177,6 +197,11 @@ while(true){
       }
       else{
         System.out.println("That is not a valid operator");
+      }
+      }
+      catch (Exception e){
+        System.out.println("A error occured. Possibly a invalid input :(.");
+        break;
       }
       break;
 
