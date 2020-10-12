@@ -89,7 +89,7 @@ while(true){
       // Prevents the code from turning off when it gets a error. Possibly due to someone putting a double value or a string as the location of the task.
       try{
       int GetLocation = GetScanner.nextInt();
-      if (GetLocation > TaskList.length){
+      if (GetLocation > 4){
         System.out.println("You cannot add/overwrite a task in a location above 4.");
         break;
       }
@@ -116,7 +116,7 @@ while(true){
       // Prevents the code from turning off when it gets a error. Possibly due to someone putting a double value or a string as the location of the task.
       try{
       int GetLocation = GetScanner.nextInt();
-      if (GetLocation > TaskList.length){
+      if (GetLocation > 4){
         System.out.println("You cannot remove a task in a location above 4.");
         break;
       }
