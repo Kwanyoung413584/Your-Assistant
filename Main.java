@@ -6,6 +6,19 @@ import java.util.Scanner;
 /* 
 This is an complicated code made by Kwanyoung Kim on 10/12/2020, 12:49 AM. 
 It is about a robot assistant that can do tasks, calculations, etc.
+
+-- Usage
+
+Type in help for a list of avaliable commands.
+
+You can either write the commands seperatly like:
+addtask
+0
+Do homework
+
+Or you can put them all in one line like:
+addtask 0 Do homework
+
 */
 
 
